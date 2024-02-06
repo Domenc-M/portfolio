@@ -1,24 +1,25 @@
-import './App.scss';
+import './App.scss'
+import AboutMe from './components/AboutMe'
+import Projects from './components/Closing'
+import Closing from './components/Projects'
 
 function App() {
   return (
     <div className="App">
       <section id="sideBar">
-        <h1>Domenc Maxime</h1>
-        <h2>Développeur Fullstack</h2>
         <span></span>
       </section>
 
-      <section id="aboutMe">
-
-      </section>
+      <AboutMe />
+      <Projects />
+      <Closing />
 
       <section id="projects">
 
       </section>
 
       <section id="closing">
-        
+
       </section>
     </div>
   );
