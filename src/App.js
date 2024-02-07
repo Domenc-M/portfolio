@@ -13,14 +13,7 @@ function App() {
       <AboutMe />
       <Projects />
       <Closing />
-
-      <section id="projects">
-
-      </section>
-
-      <section id="closing">
-
-      </section>
+      
     </div>
   );
 }
