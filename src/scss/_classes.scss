@@ -10,11 +10,26 @@ body {
 }
 
 #projects {
+
     .projectsContainer{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:space-around;
+        gap: 25%;
+
         .project{
             h2 {
-                color:$light
+                color:$white;
+                text-align: center;
+                margin-top:4rem;
+                font-size:2rem;
             }
+
+            &:hover h2 {
+                color:$light;
+            }
+
             .projectContainer{
                 height:300px;
                 width:400px;
@@ -24,19 +39,34 @@ body {
                 .topSlide{
                     top:0;
                     position:absolute;
-                    background-color:rgb(255, 255, 255, 0.8);
-                    height:50%;
+                    background-color:$whiteTransparent;
+                    height:0%;
+                    overflow:hidden;
+                    transition:all, 0.2s;
+                    display:flex;
+                    align-items:center;
+
+                    span{
+                        color:$dark;
+                        display:block;
+                        padding:15px;
+                    }
                 }
 
                 .bottomSlide{
                     bottom:0;
                     position:absolute;
-                    background-color:rgb(255, 255, 255, 0.8);
-                    height:50%;
+                    background-color:$whiteTransparent;
+                    height:0%;
+                    overflow:hidden;
+                    transition:all, 0.2s;
                     width:100%;
-                    // padding:50px;
+                    display:flex;
+                    align-items:center;
+                    flex-direction:column;
+                    justify-content:space-evenly;
 
-                    .skillFlex{
+                    .skillFlex {
                         display:flex;
                         align-items:center;
                         flex-wrap: wrap;
@@ -51,12 +81,37 @@ body {
                         }
                     }
 
+                    .projectButton {
+                        background-color:$light;
+                        padding: 1px 10px;
+                        color:white;
+                        border-radius:20px;
+                        box-shadow: 2px 2px 0px 0px $dark;
 
+                        &:hover {
+                            cursor:pointer;
+                            background-color:$primary;
+                        }
+                    }
+
+                    .projectGreyButton {
+                        background-color:gray;
+                        padding: 1px 10px;
+                        color:white;
+                        border-radius:20px;
+                    }
+                }
+
+                &:hover {
+                    .topSlide {
+                        height:50%
+                    }
+
+                    .bottomSlide {
+                        height:50%;
+                    }
                 }
             }
         }
     }
-
-
-
 }
